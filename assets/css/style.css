@@ -13,6 +13,7 @@ header{
 
 header img{
     max-width: 100%;
+    width: 100px;
 }
 
 header h3{
@@ -20,7 +21,6 @@ header h3{
 }
 
 .logo{
-    width: 200px;
     display: flex;
     align-items: center;
 }
@@ -34,7 +34,7 @@ header h3{
 }
 
 .container {
-    width: 800px;
+    width: 600px;
     margin: 0rem auto;
     padding: 2rem 1rem;
     
@@ -47,7 +47,7 @@ header h3{
 
   .cell {
     width: calc(100% / 10);
-    border: 2px solid black;
+    border: 1px solid black;
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
