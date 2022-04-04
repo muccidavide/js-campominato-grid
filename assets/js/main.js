@@ -27,10 +27,10 @@ function selectElements(selector) {
 
 function fillCells(selector) {
     const cells = selectElements(selector)
-    for (let index = 10; index < cells.length; index++) {
+    for (let index = 0; index < cells.length; index++) {
       const cell = cells[index];
       console.log(cell);
-      cell.innerHTML = `<span>${index}</span>`
+      cell.innerHTML = `<span>${index +1}</span>`
     }
   }
 
