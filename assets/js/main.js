@@ -8,6 +8,8 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 */
 
+// Funzione per generare una griglia
+
 function generateGrid(selector,tag_name, class_name,limit) {
     const cellsElement = document.querySelector(selector);
 
@@ -20,19 +22,41 @@ function generateGrid(selector,tag_name, class_name,limit) {
 
 }
 
+// Funzione per selezionare cell
+
 function selectElements(selector) {
     const cells = document.querySelectorAll(selector)
     return cells
 }
 
+// Funzione per inserire numeri nei cell
+
 function fillCells(selector) {
     const cells = selectElements(selector)
     for (let index = 0; index < cells.length; index++) {
       const cell = cells[index];
-      console.log(cell);
       cell.innerHTML = `<span>${index +1}</span>`
     }
-  }
+}
+
+// al click la cell cambia colore
+
+function activateCell(selector, active_class) {
+    const cells = selectElements(selector)
+    //console.log(cells);
+  
+    for (let index = 0; index < cells.length; index++) {
+      const cell = cells[index];
+      cell.addEventListener('click', function () {
+        cell.style.backgroundColor = 'cornflowerblue';
+        cell.style.color = 'white';
+
+      })
+    }
+}
+
 
 generateGrid ('.cells','div','cell', 100 ) 
 fillCells ('.cell')
+activateCell ('.cell', 'selected')
+

@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+header img{
+    max-width: 100%;
+}
+
+.logo{
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
 
 .box{
     width: 100%;
@@ -12,11 +29,10 @@
     
 }
 
-
 .container {
-    width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
+    width: 800px;
+    margin: 0rem auto;
+    padding: 2rem 1rem;
     
   }
 
@@ -27,19 +43,16 @@
 
   .cell {
     width: calc(100% / 10);
-    border: 2px solid white;
+    border: 2px solid black;
     aspect-ratio: 1 / 1;
-    color: rgb(255, 255, 255);
+
     display: flex;
     align-items: center;
     justify-content: center;
 
   }
 
-  .active_green {
-    background-color: palegreen;
-  }
-
-  .active_red {
-    background-color: red;
+  .selected {
+    background-color: cornflowerblue;
+    color: white;
   }
