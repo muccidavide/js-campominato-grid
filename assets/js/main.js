@@ -8,7 +8,7 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 */
 
-// Funzione per generare una griglia
+// Funzione per generare una griglia quadrata
 
 function generateGrid(selector,tag_name, class_name,limit) {
     const cellsElement = document.querySelector(selector);
@@ -16,6 +16,13 @@ function generateGrid(selector,tag_name, class_name,limit) {
     for (let index = 0; index < limit; index++) {
         const cellItem = document.createElement(tag_name);
         cellItem.classList.add(class_name); 
+
+        if (limit % 7 === 0) {
+            cellItem.style.width = "calc(100% / 7)"
+        } else if (limit % 9 === 0){
+            cellItem.style.width = "calc(100% / 9)"
+        }
+
         cellsElement.append(cellItem)
 
     }
@@ -67,9 +74,11 @@ selected.addEventListener('click', function(){
 
     if (userChoiceLevel === 'easy') {
     userLevelDifficulty = 100;
-    } else if(userChoiceLevel === 'medium'){
-    userLevelDifficulty = 81
 
+    } else if(userChoiceLevel === 'medium'){
+    userLevelDifficulty = 81;
+
+    
     } else{
     userLevelDifficulty = 49
     }
@@ -82,5 +91,6 @@ selected.addEventListener('click', function(){
 
 })
 
+const cellWidth = selectElements()
 
 
