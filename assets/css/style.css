@@ -15,8 +15,12 @@ header img{
     max-width: 100%;
 }
 
+header h3{
+    font-size: 2rem;
+}
+
 .logo{
-    width: 100px;
+    width: 200px;
     display: flex;
     align-items: center;
 }
@@ -50,9 +54,4 @@ header img{
     align-items: center;
     justify-content: center;
 
-  }
-
-  .selected {
-    background-color: cornflowerblue;
-    color: white;
   }

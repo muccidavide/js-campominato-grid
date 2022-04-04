@@ -55,20 +55,26 @@ function activateCell(selector) {
     }
 }
 
+// genereo tabella al click dell'utente e disabilito input dopo scelta
+
 let selected = document.getElementById('play');
 
 selected.addEventListener('click', function(){
-    
-    let userChoiceLevel = document.getElementById('difficulty').value
-
     let userLevelDifficulty;
+    let userChoiceLevel;
+    
+    userChoiceLevel= document.getElementById('difficulty').value
+
     if (userChoiceLevel === 'easy') {
-    userLevelDifficulty = 100
+    userLevelDifficulty = 100;
     } else if(userChoiceLevel === 'medium'){
     userLevelDifficulty = 81
+
     } else{
     userLevelDifficulty = 49
     }
+
+    selected.setAttribute ('disabled', 'disabled')
 
     generateGrid ('.cells','div','cell', userLevelDifficulty ) 
     fillCells ('.cell')
