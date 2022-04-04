@@ -1,0 +1,32 @@
+.container {
+    width: 800px;
+    margin: 2rem auto;
+  }
+
+  .cells {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cell {
+    width: calc(100% / 8);
+    border: 1px solid white;
+    aspect-ratio: 1 / 1;
+    color: rgb(133, 22, 22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .cell>span {
+    opacity: 0;
+  }
+
+  .active_green {
+    background-color: palegreen;
+  }
+
+  .active_red {
+    background-color: red;
+  }
