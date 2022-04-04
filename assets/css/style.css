@@ -1,6 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box{
+    width: 100%;
+    background-color: aquamarine;
+    padding: 0 2rem;
+    
+}
+
+
 .container {
-    width: 800px;
+    width: 1200px;
     margin: 2rem auto;
+    padding: 1rem;
+    
   }
 
   .cells {
@@ -9,18 +26,14 @@
   }
 
   .cell {
-    width: calc(100% / 8);
-    border: 1px solid white;
+    width: calc(100% / 10);
+    border: 2px solid white;
     aspect-ratio: 1 / 1;
-    color: rgb(133, 22, 22);
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
 
-  }
-
-  .cell>span {
-    opacity: 0;
   }
 
   .active_green {
