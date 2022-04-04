@@ -41,7 +41,7 @@ function fillCells(selector) {
 
 // al click la cell cambia colore
 
-function activateCell(selector, active_class) {
+function activateCell(selector) {
     const cells = selectElements(selector)
     //console.log(cells);
   
@@ -55,8 +55,26 @@ function activateCell(selector, active_class) {
     }
 }
 
+let selected = document.getElementById('play');
 
-generateGrid ('.cells','div','cell', 100 ) 
-fillCells ('.cell')
-activateCell ('.cell', 'selected')
+selected.addEventListener('click', function(){
+    
+    let userChoiceLevel = document.getElementById('difficulty').value
+
+    let userLevelDifficulty;
+    if (userChoiceLevel === 'easy') {
+    userLevelDifficulty = 100
+    } else if(userChoiceLevel === 'medium'){
+    userLevelDifficulty = 81
+    } else{
+    userLevelDifficulty = 49
+    }
+
+    generateGrid ('.cells','div','cell', userLevelDifficulty ) 
+    fillCells ('.cell')
+    activateCell ('.cell', 'selected')
+
+})
+
+
 
